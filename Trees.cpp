@@ -7,7 +7,8 @@
 
 using namespace std;
 
-int main() {
+// naive approach
+void findLeftCeiling(){
     vector<int> arr =  {2, 8, 30, 15, 25, 12};
     set<int> my_set;
     set<int> ciels;
@@ -29,14 +30,25 @@ int main() {
         }
 
     }
+}
 
-//    for(auto ciel = ciels.begin(); ciel != ciels.end(); ciel++){
-//        auto upper_bound = ciels.upper_bound(*ciel);
-//        cout<<*ciel << " ";
-//    }
+// log n solution
+void findLeftCeilingTree(){
+    vector<int> arr =  {2, 8, 30, 15, 25, 12};
+    set<int> set;
+    int lower_bound;
+    for(int i = 1; i < arr.size(); i++){
+        lower_bound = *set.lower_bound(arr[i]);
+        if(lower_bound != *set.end()){
+            cout<< lower_bound<< " ";
+        }else {
+            cout<< -1 << " ";
+        }
+
+        set.insert(arr[i]);
+    }
 
 
 
-    return 0;
 }
 
