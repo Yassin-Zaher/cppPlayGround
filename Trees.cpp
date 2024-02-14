@@ -7,6 +7,9 @@
 
 using namespace std;
 
+void optimal() {
+	vector<int> arr = {};
+}
 // naive approach
 void findLeftCeiling(){
     vector<int> arr =  {2, 8, 30, 15, 25, 12};
@@ -47,8 +50,5 @@ void findLeftCeilingTree(){
 
         set.insert(arr[i]);
     }
-
-
-
 }
 

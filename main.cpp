@@ -24,10 +24,5 @@ int main() {
 
         set.insert(arr[i]);
     }
-
-
-
-
     return 0;
 }
-
